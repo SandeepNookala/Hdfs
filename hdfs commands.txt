@@ -1,0 +1,92 @@
+
+
+1. start all deamons of cluster:
+--------------------------------
+start-all.sh
+
+
+2. hadoop version :
+-------------------
+hadoop version
+
+
+3.list files or directories:
+---------------------------
+hdfs dfs -ls /data_Science
+
+
+4.list all sub directories:
+--------------------------
+hdfs dfs -ls -R /data_Science
+
+
+5. create new directory:
+------------------------
+hdfs dfs -mkdir /data_Science/commands
+
+
+6. create new file:
+------------------
+hdfs dfs -touchz /data_Science/commands/new.txt
+
+7. print contents in file:
+--------------------------
+hdfs dfs -cat /data_Science/commands/new.txt
+
+8.print last 1kb of file:
+-------------------------
+hdfs dfs -tail /data_Science/commands/new.txt
+
+
+9. copy from local to hdfs or put:
+----------------------------------
+hdfs dfs -copyFromLocal <local source file path> <hdfs destination path>
+
+hdfs dfs -put <local source file path> <hdfs destination path>
+
+
+10. from hdfs copy to local or get:
+----------------------------------
+hdfs dfs -copyToLocal <hdfs source path> <local destination path>
+
+
+11. move from local to hdfs:
+---------------------------
+hdfs dfs -moveFromLocal <local source file path> <hdfs destination file path>
+
+
+12.copy within hdfs:
+--------------------
+hdfs dfs -cp <hdfs source file path> < hdfs destination file path>
+
+13.move within hdfs:
+--------------------
+hdfs dfs -mv <hdfs source file path> <hdfs destination file path>
+
+14.delete file:
+---------------
+hdfs dfs -rm /data_Science/commands/new.txt
+
+15.delete directories:
+----------------------
+hdfs dfs -rm -R /data_Science/commands
+
+16.size of each file in directory:
+----------------------------------
+hdfs dfs -du /data_Science/commands
+
+
+17.total size of directory:
+---------------------------
+hdfs dfs -du -s /data_Science/commands
+
+18.change replication factor of a file:
+---------------------------------------
+
+hdfs dfs -setrep 2 /data_Science/commands
+
+
+19 .check health of hadoop:
+---------------------------
+hdfs dfs fsck /data_Science
+
