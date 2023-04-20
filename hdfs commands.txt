@@ -1,5 +1,4 @@
 
-
 1. start all deamons of cluster:
 --------------------------------
 start-all.sh
@@ -29,9 +28,11 @@ hdfs dfs -mkdir /data_Science/commands
 ------------------
 hdfs dfs -touchz /data_Science/commands/new.txt
 
+
 7. print contents in file:
 --------------------------
 hdfs dfs -cat /data_Science/commands/new.txt
+
 
 8.print last 1kb of file:
 -------------------------
@@ -40,10 +41,14 @@ hdfs dfs -tail /data_Science/commands/new.txt
 
 9. copy from local to hdfs or put:
 ----------------------------------
-hdfs dfs -copyFromLocal <local source file path> <hdfs destination path>
 
+hdfs dfs -copyFromLocal <local source file path> <hdfs destination path>
 hdfs dfs -put <local source file path> <hdfs destination path>
 
+
+hdfs dfs -copyFromLocal employee.csv /user/cloudera/
+hdfs dfs -put dept.csv /user/cloudera/
+hdfs dfs -copyFromLocal personal.csv /user/cloudera/
 
 10. from hdfs copy to local or get:
 ----------------------------------
@@ -59,17 +64,21 @@ hdfs dfs -moveFromLocal <local source file path> <hdfs destination file path>
 --------------------
 hdfs dfs -cp <hdfs source file path> < hdfs destination file path>
 
+
 13.move within hdfs:
 --------------------
 hdfs dfs -mv <hdfs source file path> <hdfs destination file path>
+
 
 14.delete file:
 ---------------
 hdfs dfs -rm /data_Science/commands/new.txt
 
+
 15.delete directories:
 ----------------------
 hdfs dfs -rm -R /data_Science/commands
+
 
 16.size of each file in directory:
 ----------------------------------
@@ -79,6 +88,7 @@ hdfs dfs -du /data_Science/commands
 17.total size of directory:
 ---------------------------
 hdfs dfs -du -s /data_Science/commands
+
 
 18.change replication factor of a file:
 ---------------------------------------
