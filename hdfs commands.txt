@@ -45,11 +45,6 @@ hdfs dfs -tail /data_Science/commands/new.txt
 hdfs dfs -copyFromLocal <local source file path> <hdfs destination path>
 hdfs dfs -put <local source file path> <hdfs destination path>
 
-
-hdfs dfs -copyFromLocal employee.csv /user/cloudera/
-hdfs dfs -put dept.csv /user/cloudera/
-hdfs dfs -copyFromLocal personal.csv /user/cloudera/
-
 10. from hdfs copy to local or get:
 ----------------------------------
 hdfs dfs -copyToLocal <hdfs source path> <local destination path>
@@ -99,4 +94,5 @@ hdfs dfs -setrep 2 /data_Science/commands
 19 .check health of hadoop:
 ---------------------------
 hdfs dfs fsck /data_Science
+
 
